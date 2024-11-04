@@ -1,8 +1,16 @@
 package Sistema.Pagos;
 
 public class PagoPayPal implements EstrategiaPago {                 // Clase para el pago con PayPal
+ private int pago;
+
+    public PagoPayPal(int pago) {
+        this.pago = pago;
+    }
+
     @Override
-    public void pagar(double monto) {                               // Método para pagar
-        System.out.println("Pagando " + monto + " con PayPal.");    // Se imprime el mensaje de pago con PayPal
+    public String toString() {
+        return "PagoPayPal{" +
+            "pago=" + pago +
+            '}';
     }
 }
